@@ -1,0 +1,76 @@
+:root {
+    --color-principal: #9169f4;
+    --color-secundario: #653176;
+}
+
+/* Estilo para redes sociales */
+.contenedor-redes {
+    height: 30px;
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título principal */
+.container-titulo {
+    color: var(--color-principal);
+    font-size: 15rem;
+    margin: 20px auto;
+}
+
+/* Estilo para los enlaces del navbar */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+/* Hover en los enlaces */
+.navbar-nav .nav-link:hover {
+    color: var(--color-secundario);
+    border-top: 3px solid var(--color-principal);
+    padding-top: 5px;
+}
+
+/* Personalizar botón morado */
+.btn-morado {
+    color: var(--color-secundario);
+    border-color: var(--color-principal);
+}
+
+/* Hover para el botón morado */
+.btn-morado:hover {
+    background-color: var(--color-principal);
+    color: #fff;
+    border-color: var(--color-principal);
+}
+@media (max-width: 768px) {
+    .container-titulo {
+        font-size: 3rem;
+        margin: 10px 20px;
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+    .btn-morado {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-titulo {
+        font-size: 1.5rem;
+        margin: 5px 10px;
+        text-align: center;
+    }
+    .contenedor-redes {
+        font-size: 1rem;
+        height: 25px;
+    }
+}
