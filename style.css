@@ -19,23 +19,45 @@ i{
 /* Título principal */
 .container-titulo {
     color: var(--color-principal);
-    font-size: 15rem;
+    font-size: 15em;
     margin: 20px auto;
 }
-
-/* Estilo para los enlaces del navbar */
-.navbar-nav .nav-link {
-    position: relative;
-    transition: all 0.3s ease;
-    font-size: 1rem;
+.nav-item{
+    text-align: left;
+    /* width: 160px; */
+    padding: 0 5px;
 }
-
+/* Estilo para los enlaces del navbar */
+.navbar-nav .nav-link{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    position: relative;
+    /* transition: all 0.3s ease; */
+    font-size: 0.95em;
+    letter-spacing: 0px;
+    padding-top: 10px;
+}
+.nav-link:before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background-color: var(--color-principal);
+    transition: 0.5s;
+}
+.nav-link:before{
+    right: 0px;
+    top: -10px;
+}
+.nav-link:hover:before{
+    width: 100%;
+}
 /* Hover en los enlaces */
-.navbar-nav .nav-link:hover {
+/* .navbar-nav .nav-link:hover {
     color: var(--color-secundario);
     border-top: 3px solid var(--color-principal);
-    padding-top: 5px;
-}
+    margin-bottom: 3px;
+} */
 
 /* Personalizar botón morado */
 .btn-morado {
