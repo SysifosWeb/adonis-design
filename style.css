@@ -1,4 +1,5 @@
 :root {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
     --color-principal: #9169f4;
     --color-secundario: #653176;
 }
@@ -19,17 +20,12 @@ i{
 /* Título principal */
 .container-titulo {
     color: var(--color-principal);
-    font-size: 15em;
-    margin: 20px auto;
+    font-size: 13em;    
 }
-.nav-item{
-    text-align: left;
-    /* width: 160px; */
-    padding: 0 5px;
-}
+
 /* Estilo para los enlaces del navbar */
 .navbar-nav .nav-link{
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    
     font-weight: 400;
     position: relative;
     /* transition: all 0.3s ease; */
@@ -51,6 +47,9 @@ i{
 }
 .nav-link:hover:before{
     width: 100%;
+}
+.nav-link:hover{
+    color: var(--color-principal) !important;
 }
 /* Hover en los enlaces */
 /* .navbar-nav .nav-link:hover {
@@ -106,11 +105,55 @@ i{
 }
 .card:hover{
     color: var(--color-principal); /* Cambia el color del texto al hacer hover */
-    transition: color 0.3s ease;
+    transition: 0.5s;
 }
 .section-card{
     background-color: #f3f3f3;
     height: auto;
+}
+
+#actualidad{
+    padding: 50px 0;
+}
+#youtube{
+    padding: 50px 0;
+}
+#campus{
+    padding: 50px 0;
+}
+footer{
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #353839;
+    color: #8c8989;
+}
+footer::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 30px;   
+    background-color: #E9EAEE;
+}
+.dark{
+    background-color: #353839;
+    color: #bfbfbf;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.dark:hover{
+    text-decoration: underline;
+    color: white;
+    
+}
+.without_space{
+    line-height:6px;
+}
+hr,ul,li{
+    width: 100%;
+    padding-left: 0;
 }
 
 @media (max-width: 768px) {
