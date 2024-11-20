@@ -124,7 +124,7 @@ i{
 footer{
     position: relative;
     padding-top: 50px;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
     background-color: #353839;
     color: #8c8989;
 }
@@ -154,6 +154,22 @@ footer::before{
 hr,ul,li{
     width: 100%;
     padding-left: 0;
+}
+.deep_footer{
+    border-top: 0.5px solid rgb(100, 100, 100);
+    position:relative;
+    background-color: #272A2B;
+    height: 80px;
+    /* bottom: 0px; */
+
+}
+.deep_footer .icons a i{
+    font-size: 30px;
+    color: #404344;
+    transition: 0.5s;
+}
+.deep_footer .icons a i:hover{
+  color: white;
 }
 
 @media (max-width: 768px) {
