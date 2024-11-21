@@ -1,10 +1,17 @@
 :root {
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
     --color-principal: #9169f4;
     --color-secundario: #653176;
 }
 
-/* Estilo para redes sociales */
+body,
+html {
+    font-family: "Montserrat", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+}
+
+/* Redes Sociales */
 .contenedor-redes {
     height: 30px;
     width: 100%;
@@ -14,65 +21,70 @@
     align-items: center;
     justify-content: center;
 }
-i{
+
+i {
     color: var(--color-secundario);
 }
-/* Título principal */
-.container-titulo {
-    color: var(--color-principal);
-    font-size: 13em;    
+
+.container-header {
+    display: flex;
+    margin: 0 8rem !important;
+    justify-content: space-between;
 }
 
-/* Estilo para los enlaces del navbar */
-.navbar-nav .nav-link{
-    
+/* Títulos */
+.container-titulo {
+    color: var(--color-principal);
+    font-size: 3em;
+}
+
+/* Navbar */
+.navbar-nav .nav-item .nav-link {
     font-weight: 400;
     position: relative;
-    /* transition: all 0.3s ease; */
     font-size: 0.95em;
     letter-spacing: 0px;
-    padding-top: 10px;
+    line-height: 0.8rem;
+    padding: 2rem 0 !important;
+    width: min-content !important;
 }
-.nav-link:before{
+
+.nav-link:before {
     content: "";
     position: absolute;
     height: 3px;
     width: 0%;
     background-color: var(--color-principal);
     transition: 0.5s;
-}
-.nav-link:before{
     right: 0px;
     top: -10px;
 }
-.nav-link:hover:before{
+
+.nav-link:hover:before {
     width: 100%;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: var(--color-principal) !important;
 }
-/* Hover en los enlaces */
-/* .navbar-nav .nav-link:hover {
-    color: var(--color-secundario);
-    border-top: 3px solid var(--color-principal);
-    margin-bottom: 3px;
-} */
 
-/* Personalizar botón morado */
+/* Botón Morado */
 .btn-morado {
     color: var(--color-secundario);
     border-color: var(--color-principal);
 }
 
-/* Hover para el botón morado */
 .btn-morado:hover {
     background-color: var(--color-principal);
     color: #fff;
     border-color: var(--color-principal);
 }
-.img-contenedor img{
+
+/* Imágenes */
+.img-contenedor img {
     height: 600px;
 }
+
 .main-image {
     height: 500px;
     object-fit: cover;
@@ -100,87 +112,126 @@ i{
     opacity: 1;
     border: 2px solid #fff;
 }
+
+/* Cards */
 .card {
     background-color: #f3f3f3;
-}
-.card:hover{
-    color: var(--color-principal); /* Cambia el color del texto al hacer hover */
     transition: 0.5s;
 }
-.section-card{
+
+.card:hover {
+    color: var(--color-principal);
+}
+
+.section-card {
     background-color: #f3f3f3;
     height: auto;
 }
 
-#actualidad{
+/* Secciones */
+#actualidad,
+#youtube,
+#campus {
     padding: 50px 0;
 }
-#youtube{
-    padding: 50px 0;
-}
-#campus{
-    padding: 50px 0;
-}
-footer{
+
+/* Footer */
+footer {
     position: relative;
     padding-top: 50px;
-    /* padding-bottom: 40px; */
     background-color: #353839;
     color: #8c8989;
 }
-footer::before{
+
+footer::before {
     content: "";
     position: absolute;
     top: 0px;
     height: 10px;
     width: 100%;
-    margin-bottom: 30px;   
-    background-color: #E9EAEE;
+    margin-bottom: 30px;
+    background-color: #e9eaee;
 }
-.dark{
+
+footer img {
+    width: 90%;
+}
+
+.dark {
     background-color: #353839;
     color: #bfbfbf;
     text-decoration: none;
     transition: 0.5s;
 }
-.dark:hover{
+
+.dark:hover {
     text-decoration: underline;
     color: white;
-    
 }
-.without_space{
-    line-height:6px;
+
+.without_space {
+    line-height: 6px;
 }
-hr,ul,li{
+
+hr,
+ul,
+li {
     width: 100%;
     padding-left: 0;
 }
-.deep_footer{
-    border-top: 0.5px solid rgb(100, 100, 100);
-    position:relative;
-    background-color: #272A2B;
-    height: 80px;
-    /* bottom: 0px; */
 
+/* Deep Footer */
+.deep_footer {
+    border-top: 0.5px solid rgb(100, 100, 100);
+    background-color: #272a2b;
+    height: 80px;
 }
-.deep_footer .icons a i{
+
+.deep_footer .icons a i {
     font-size: 30px;
     color: #404344;
     transition: 0.5s;
 }
-.deep_footer .icons a i:hover{
-  color: white;
+
+.deep_footer .icons a i:hover {
+    color: white;
 }
 
+.display-flex {
+    display: flex;
+}
+
+.footer-links {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.footer-info {
+    display: flex;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.footer-info-mark {
+    color: #a7a9ab;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
     .container-titulo {
         font-size: 3rem;
         margin: 10px 20px;
         text-align: center;
     }
+
     .navbar-nav .nav-link {
         font-size: 0.9rem;
     }
+
     .btn-morado {
         padding: 0.3rem 0.8rem;
         font-size: 0.9rem;
@@ -193,6 +244,7 @@ hr,ul,li{
         margin: 5px 10px;
         text-align: center;
     }
+
     .contenedor-redes {
         font-size: 1rem;
         height: 25px;
